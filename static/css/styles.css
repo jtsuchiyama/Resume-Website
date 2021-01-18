@@ -1,0 +1,13 @@
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  iframe {
+    width: 500px;
+    height: 500px;
+    margin-left: auto;  
+    margin-right: auto;
+  }
