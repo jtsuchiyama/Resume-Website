@@ -1,11 +1,22 @@
 {% extends 'base.html' %}
 
+{% block title %}
+Art
+{% endblock %}
+
 {% block content %}
     <h1 class="text-center">Art</h1>
 
-    <h3>Fighting Type Wallpaper</h2>
-    <image width="750" class="center" src="{{ url_for('static', filename='images/fightingwallpaper.jpg') }}"></image>
-
-    <h3>Ukulele/Fire Force Makuhita</h2>
-    <image width="750" class="center" src="{{ url_for('static', filename='images/ukefiremakuhita.jpg') }}"></image>
+    <div class="row section-container-spacer">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='images/fightingwallpaper.jpg') }}" class="img-responsive" alt="">
+                <p>Pokemon Fighting Type Wallpaper</p>
+            </div>
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='images/ukefiremakuhita.jpg') }}" class="img-responsive" alt="">
+                <p>Ukulele + Fire Force Makuhita</p>
+            </div>
+        </div>
+    </div>
 {% endblock %}

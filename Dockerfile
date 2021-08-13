@@ -10,6 +10,8 @@ ADD templates /templates
 
 ADD static /static
 
+ADD assets /assets
+
 EXPOSE 5000
 
 EXPOSE 8000

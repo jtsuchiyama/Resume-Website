@@ -1,19 +1,101 @@
 {% extends 'base.html' %}
 
+{% block title %}
+Projects
+{% endblock %}
+
 {% block content %}
     <h1 class="text-center">Projects</h1>
 
-    <h2 class="text-center">Workout Tracker</h1>
-        <p>Python app that allows users to track their workouts using Flask, PostgresQL, psycopg2</p>
-        <a href="https://github.com/jtsuchiyama/workout">GitHub</a>
 
-    <h2 class="text-center">Hawaii COVID Tracker</h1>
-        <p>Python app that scrapes COVID data in Hawaii, sending SMS notifications using Twilio and displays graph with MatPlotLib and PyQt5</p>
-        <a href="https://github.com/jtsuchiyama/hawaii-covid-tracker">GitHub</a>
+    <div class="col-xs-12">
+        <div class="text-center section-container-spacer">
+          <h2 class="with-project-number"><span class="project-number">01</span><a href="https://workout-wfwzb.ondigitalocean.app/" target="_blank">Workout Tracker</h2>
+        </div>
+        <div class="row section-container-spacer">
+          <div class="col-md-4">
+              <div class="section-container-spacer">
+                <h3><a href="https://github.com/jtsuchiyama/workout" target="_blank">GitHub Repo</a></h3>
+                <p>Language: Python</p>
+              </div>
 
-    <h2 class="text-center">Resume Website</h1>
-        <p> Personal website using Flask</p>
-        <a href="https://github.com/jtsuchiyama/Resume-Website">GitHub</a>
+              <h4>Main Libraries/Applications</h4>
+              
+              <ul class="list-unstyled">
+                <li>Flask</li> 
+                <li>PostgresQL</li>
+                <li>psycopg2</li>
+              </ul>
+              
+          </div>
+          <div class="col-md-8">
+            <p>Python webpage that allows users to track their workouts using Flask, 
+                PostgresQL, psycopg2. It offers features such as account creation, workout logging, 
+                and workout duplication.</p>
+          </div>
+        </div>
+        <img src="{{ url_for('static', filename='images/workouttracker.png') }}" alt="" class="img-responsive">
+      </div>
 
+
+
+  
+      <div class="col-xs-12">
+          <div class="text-center section-container-spacer">
+            <h2 class="with-project-number"><span class="project-number">02</span><a href="https://workout-wfwzb.ondigitalocean.app/" target="_blank">Hawaii COVID Tracker</h2>
+          </div>
+          <div class="row section-container-spacer">
+            <div class="col-md-4">
+                <div class="section-container-spacer">
+                  <h3><a href="https://github.com/jtsuchiyama/hawaii-covid-tracker" target="_blank">GitHub Repo</a></h3>
+                  <p>Language: Python</p>
+                </div>
+  
+                <h4>Main Libraries/Applications</h4>
+                
+                <ul class="list-unstyled">
+                  <li>beautifulsoup4</li> 
+                  <li>Matplotlib</li>
+                  <li>pandas</li>
+                  <li>PyQt5</li>
+                  <li>Twilio</li>
+                </ul>
+                
+            </div>
+            <div class="col-md-8">
+              <p>Hawaii COVID-19 statistics tracker with the ability to send SMS notifications to 
+                  registered phone numbers and create simple graphs of the data. Scrapes 
+                  data from https://health.hawaii.gov/coronavirusdisease2019/. Coded in Python.</p>
+            </div>
+          </div>
+          <img src="{{ url_for('static', filename='images/covidtracker.png') }}" alt="" class="img-responsive">
+        </div>
+
+        
     
+        
+        <div class="col-xs-12">
+            <div class="text-center section-container-spacer">
+              <h2 class="with-project-number"><span class="project-number">03</span><a href="https://workout-wfwzb.ondigitalocean.app/" target="_blank">Resume Website</h2>
+            </div>
+            <div class="row section-container-spacer">
+              <div class="col-md-4">
+                  <div class="section-container-spacer">
+                    <h3><a href="https://github.com/jtsuchiyama/Resume-Website" target="_blank">GitHub Repo</a></h3>
+                    <p>Language: Python</p>
+                  </div>
+    
+                  <h4>Main Libraries/Applications</h4>
+                  
+                  <ul class="list-unstyled">
+                    <li>Flask</li> 
+                  </ul>
+                  
+              </div>
+              <div class="col-md-8">
+                <p>Python webpage that contains a portfolio of coding projects, ukulele covers, and art.</p>
+              </div>
+            </div>
+            <img src="{{ url_for('static', filename='images/resumewebsite.png') }}" alt="" class="img-responsive">
+        </div>
 {% endblock %}

@@ -1,69 +1,83 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="static/css/styles.css" type="text/css">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="description" name="description">
+    <meta name="google" content="notranslate" />
+    <meta content="Mashup templates have been developped by Orson.io team" name="author">
 
-    <title>{% block title %} {% endblock %}</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <a class="navbar-brand" href="{{ url_for('index')}}">Jake Tsuchiyama</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="/art">Art</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="/music">Music</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="/projects">Projects</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="https://workout-wfwzb.ondigitalocean.app/">Workout Tracker</a>
-            </li>
-            </ul>
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <title>{% block title %} {% endblock %}</title>  
+
+    <link href="{{ url_for('static', filename='css/styles1.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/extra.css') }}" rel="stylesheet">
+</head>
+
+<body>
+<!-- Add your content of header -->
+
+    <header>
+        <nav class="navbar navbar-fixed-top navbar-default">
+            <div class="container">
+                <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                
+            <nav class="navbar-fullscreen" id="navbar-middle">
+                <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <ul class="navbar-fullscreen-links">
+                <li><a href="/" title="">Home</a></li>
+                <li><a href="/projects" title="">Projects</a></li>
+                <li><a href="/music" title="">Ukulele Covers</a></li>
+                <li><a href="/art" title="">Art</a></li>
+                <li><a href="https://workout-wfwzb.ondigitalocean.app/" target ="_blank" title="">Workout Tracker</a></li>
+                </ul>
+
+                <div class="footer-container">
+                
+                <p><small>© Jake Tsuchiyama | Website created with <a href="http://www.mashup-template.com/" title="Create website with free html template">Mashup Template</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></small></p>
+                <p class="footer-share-icons">
+                    <a href="https://www.linkedin.com/in/jake-tsuchiyama-46a7b61a1/" class="fa-icon" title="">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://github.com/jtsuchiyama" class="fa-icon" title="">
+                        <i class="fa fa-github" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCys2PdA6HFsz19JlcxW6zmQ" class="fa-icon" title="">
+                        <i class="fa fa-youtube" aria-hidden="true"></i>
+                    </a>
+                </p>
+                            
+                    </div>
+                </nav> 
+            </div>
+        </nav>
+    </header>
+
+    <div class="section-container content-container">
+        <div class="container">
+            <div class="row">
+                {% block content %} {% endblock %}
+            </div>
         </div>
-    </nav>
-    <div class="container">
-        {% block content %} {% endblock %}
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a href="https://www.linkedin.com/in/jake-tsuchiyama-46a7b61a1/" target ="_blank" class="nav-link">LinkedIn</a>
-                </li>	
-                <li class="nav-item">
-                    <a href="https://github.com/jtsuchiyama" target ="_blank" class="nav-link">GitHub</a>
-                </li>	
-                <li class="nav-item">
-                    <a href="https://www.youtube.com/channel/UCys2PdA6HFsz19JlcxW6zmQ" target ="_blank" class="nav-link">YouTube</a>
-                </li>	
-                <li class="nav-item">
-                    <a href="https://twitter.com/jtkulele" target ="_blank" class="nav-link">Twitter</a>
-                </li>		
-                <li class="nav-item">
-                    <a href="" class="nav-link">jtsuchiyama@scu.edu</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+        navbarToggleSidebar();
+        closeMenuBeforeGoingToPage();
+        navActivePage();
+        });
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+</body>
 </html>

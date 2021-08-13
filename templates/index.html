@@ -1,7 +1,40 @@
 {% extends 'base.html' %}
 
+{% block title %}
+Home
+{% endblock %}
+
 {% block content %}
-    <h1 class="text-center">Jake Tsuchiyama</h1>
-    <image class="center" src="{{ url_for('static', filename='images/personal.png') }}"></image>
-    <h4 class="text-center">My name is Jake Tsuchiyama, and I am a software engineer from Honolulu, Hawaii. I am currently attending Santa Clara University to obtain my B.S. in Computer Science and Engineering. My hobbies include: coding, ukulele, graphic design, weight training, marathon running, and healthy eating/cooking. On this website, you will find a portfolio of coding projects, ukulele covers, and art.</h3>
+    <div class="section-container content-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="col-md-6">
+                        <img src="{{ url_for('static', filename='images/personal.png') }}" class="img-responsive" alt=""> 
+                    </div>
+                    <div class="col-md-6">
+                        <h1 class="h2">Jake Tsuchiyama</h1>
+                        <p>I am a software engineer from Honolulu, Hawaii. I am currently attending Santa Clara University to obtain my B.S. 
+                            in Computer Science and Engineering. My hobbies include: coding, ukulele, graphic design, weight training, marathon running, 
+                            and healthy eating/cooking. On this website, you will find a portfolio of coding projects, ukulele covers, and art.</p>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="mailto:jtsuchiyama@scu.edu" target ="_blank" title="" class="link-like-text">email</a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/jake-tsuchiyama-46a7b61a1/" target ="_blank" title="" class="link-like-text">linkedin</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/jtsuchiyama" target ="_blank" title="" class="link-like-text">github</a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/channel/UCys2PdA6HFsz19JlcxW6zmQ" target ="_blank" title="" class="link-like-text">youtube</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
