@@ -13,7 +13,3 @@ def projects():
 @app.route("/music/")
 def music():
     return render_template("music.html")
-
-@app.route('/art/')
-def art():
-    return render_template("art.html")

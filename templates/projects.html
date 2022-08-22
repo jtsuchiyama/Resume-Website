@@ -5,19 +5,42 @@ Projects
 {% endblock %}
 
 {% block content %}
-    <h1 class="text-center">Projects</h1>
+    <h1 class="text-center divider">Projects</h1>
 
-
-
-
-    <div class="col-xs-12">
+    <div class="col-xs-12 divider">
       <div class="text-center section-container-spacer">
-        <h2 class="with-project-number"><span class="project-number">01</span><a href="https://github.com/jtsuchiyama/ukulele-cv" target="_blank">Ukulele Chord Recognition</a></h2>
+        <h2><a href="https://github.com/SCUGuildGamers/GuildGamers" target="_blank">Drifting in the Water</a></h2>
+      </div>
+      <div class="row section-container-spacer">
+        <div class="col-md-4">
+            <div class="section-container-spacer">
+              <p>Language: Unity / C#</p>
+              <a href="https://github.com/SCUGuildGamers/GuildGamers" target ="_blank">GitHub Link</a>
+            </div>
+
+            <h4>Main Libraries/Applications</h4>
+            
+            <ul class="list-unstyled">
+              <li>Unity</li>
+            </ul>
+            
+        </div>
+        <div class="col-md-8">
+          <p>A 2D side-scrolling bullet hell game that spreads awareness of ocean pollution solutions through gameplay mechanics and messaging</p>
+        </div>
+      </div>
+      <img src="{{ url_for('static', filename='images/driftinginthewater.png') }}" alt="" class="img-responsive">
+    </div>
+
+    <div class="col-xs-12 divider">
+      <div class="text-center section-container-spacer">
+        <h2><a href="https://github.com/jtsuchiyama/ukulele-cv" target="_blank">Ukulele Chord Recognition</a></h2>
       </div>
       <div class="row section-container-spacer">
         <div class="col-md-4">
             <div class="section-container-spacer">
               <p>Language: Python</p>
+              <a href="https://github.com/jtsuchiyama/ukulele-cv" target ="_blank">GitHub Link</a>
             </div>
 
             <h4>Main Libraries/Applications</h4>
@@ -42,14 +65,15 @@ Projects
 
 
 
-    <div class="col-xs-12">
+    <div class="col-xs-12 divider">
         <div class="text-center section-container-spacer">
-          <h2 class="with-project-number"><span class="project-number">02</span><a href="https://github.com/jtsuchiyama/workout" target="_blank">Workout Tracker</a></h2>
+          <h2><a href="https://github.com/jtsuchiyama/workout" target="_blank">Workout Tracker</a></h2>
         </div>
         <div class="row section-container-spacer">
           <div class="col-md-4">
               <div class="section-container-spacer">
                 <p>Language: Python</p>
+                <a href="https://github.com/jtsuchiyama/workout" target ="_blank">GitHub Link</a>
               </div>
 
               <h4>Main Libraries/Applications</h4>
@@ -73,14 +97,15 @@ Projects
 
 
   
-      <div class="col-xs-12">
+      <div class="col-xs-12 divider">
           <div class="text-center section-container-spacer">
-            <h2 class="with-project-number"><span class="project-number">03</span><a href="https://github.com/jtsuchiyama/hawaii-covid-tracker" target="_blank">Hawaii COVID Tracker</a></h2>
+            <h2><a href="https://github.com/jtsuchiyama/hawaii-covid-tracker" target="_blank">Hawaii COVID Tracker</a></h2>
           </div>
           <div class="row section-container-spacer">
             <div class="col-md-4">
                 <div class="section-container-spacer">
                   <p>Language: Python</p>
+                  <a href="https://github.com/jtsuchiyama/hawaii-covid-tracker" target ="_blank">GitHub Link</a>
                 </div>
   
                 <h4>Main Libraries/Applications</h4>
@@ -106,14 +131,15 @@ Projects
         
     
         
-        <div class="col-xs-12">
+        <div class="col-xs-12 divider">
             <div class="text-center section-container-spacer">
-              <h2 class="with-project-number"><span class="project-number">04</span><a href="https://github.com/jtsuchiyama/Resume-Website" target="_blank">Resume Website</a></h2>
+              <h2><a href="https://github.com/jtsuchiyama/Resume-Website" target="_blank">Resume Website</a></h2>
             </div>
             <div class="row section-container-spacer">
               <div class="col-md-4">
                   <div class="section-container-spacer">
                     <p>Language: Python</p>
+                    <a href="https://github.com/jtsuchiyama/Resume-Website" target ="_blank">GitHub Link</a>
                   </div>
     
                   <h4>Main Libraries/Applications</h4>
@@ -124,7 +150,7 @@ Projects
                   
               </div>
               <div class="col-md-8">
-                <p>Python webpage that contains a portfolio of coding projects, ukulele covers, and art.</p>
+                <p>Python webpage that contains a portfolio of coding projects and ukulele covers.</p>
               </div>
             </div>
             <img src="{{ url_for('static', filename='images/resumewebsite.png') }}" alt="" class="img-responsive">
